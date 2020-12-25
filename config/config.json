@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "tutoruser",
+    "password": "cLrBGCytxcFmdLPt",
+    "database": "tutor_development",
+    "host": "144.76.184.38",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "pass@123",
+    "database": "tutorPortal2",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "pass@123",
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

@@ -1,0 +1,607 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TutorPortal",
+		"_postman_id": "aa31867e-03f7-54a5-10b3-6b0e9149918b",
+		"description": "Api Documentation for Tutor portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://144.76.184.38:7000/api/auth/signup",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/auth/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\" :\"Rakesh\",\n\"lastName\" : \"Roshan\",\n\"email\" : \"avengerrocks2012@gmail.com\",\n\"password\" : \"pass@12345\",\n\"role\" : \"student\"\n}"
+				},
+				"description": "SignUp Details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://http://144.76.184.38:7000/api/auth/verify/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwODM3NDA3LCJleHAiOjE2MDA4NDEwMDd9.gTKrSffxb32gZ5qDfX8qZJe96bFcfbH2SMSgYqPbkqY",
+			"request": {
+				"url": "http://http://144.76.184.38:7000/api/auth/verify/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwODM3NDA3LCJleHAiOjE2MDA4NDEwMDd9.gTKrSffxb32gZ5qDfX8qZJe96bFcfbH2SMSgYqPbkqY",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Verify User"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/auth/signin",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/auth/signin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"avengerrocks2012@gmail.com\",\n\t\"password\" : \"pass@12345\"\n}"
+				},
+				"description": "To Login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/user/change-password",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/user/change-password",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwODM3ODU4LCJleHAiOjE2MDM0Mjk4NTh9.rBWFXcd271XAgVRT57XXYWqNFHnHa1hqoEeYPN7OPUw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userId\" : 16,\n\"oldPassword\" : \"pass@12345\",\n\"newPassword\" : \"pass@123\",\n\"role\" : \"student\"\n}"
+				},
+				"description": "To change user Password"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/auth/forgot-password",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/auth/forgot-password",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\" : \"shyam1709saini@gmail.com\"\n}"
+				},
+				"description": "Forgot password api for email "
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/auth/verify/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwODM3NDA3LCJleHAiOjE2MDA4NDEwMDd9.gTKrSffxb32gZ5qDfX8qZJe96bFcfbH2SMSgYqPbkqY",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/auth/verify/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwODM3NDA3LCJleHAiOjE2MDA4NDEwMDd9.gTKrSffxb32gZ5qDfX8qZJe96bFcfbH2SMSgYqPbkqY",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"password": "pass@12"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/student/addStudentDetails",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/student/addStudentDetails",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwODM4MjI1LCJleHAiOjE2MDM0MzAyMjV9.sOpNFLWpKWmm5RJx2ZR_JGVZZQFMij2Bnz-0ZmisyAw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"userId\" : 16, \n        \"dob\": \"2020-09-15\",\n        \"country\": 101,\n        \"state\": 5,\n        \"city\": 10,\n        \"class\" :\"Seven\",\n        \"timeZone\": \"Utc (GMT+3)\",\n        \"joinDate\" : \"2020-09-10\",\n        \"nativeLanguage\" : \"English\",\n        \"subjectDetails\": [{\"subjectId\":1,\"subSubjectId\": 2 },{\"subjectId\":1,\"subSubjectId\": 3 }],\n        \"documentUpload\" : {\"type\": \"adhar\",\"imageUrl\": \"http://rexcrt.com\"}\n}"
+				},
+				"description": "Add Student Details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/student/addStudentDetails",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/student/addStudentDetails",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwODM4MjI1LCJleHAiOjE2MDM0MzAyMjV9.sOpNFLWpKWmm5RJx2ZR_JGVZZQFMij2Bnz-0ZmisyAw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"userId\" : 16, \n        \"dob\": \"2020-09-15\",\n        \"country\": 101,\n        \"state\": 5,\n        \"city\": 10,\n        \"class\" :\"Seven\",\n        \"timeZone\": \"Utc (GMT+3)\",\n        \"joinDate\" : \"2020-09-10\",\n        \"nativeLanguage\" : \"English\",\n        \"subjectDetails\": [{\"subjectId\":1,\"subSubjectId\": 2 },{\"subjectId\":1,\"subSubjectId\": 3 }],\n        \"documentUpload\" : {\"type\": \"adhar\",\"imageUrl\": \"/9j}"
+				},
+				"description": "Add Student"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/student/updateStudent",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/student/updateStudent",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwNzg2NzYxLCJleHAiOjE2MDMzNzg3NjF9.NtCxv9NNq3r9ONYOdAch2zkvi1GNQ41p95dpGAqcKP4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n       \"userId\" : 12, \n        \"dob\": \"2020-09-15\",\n        \"country\": 101,\n        \"state\": 5,\n        \"city\": 10,\n        \"class\" :\"Seven\",\n        \"timeZone\": \"Utc (GMT+3)\",\n        \"joinDate\" : \"2020-09-10\",\n        \"nativeLanguage\" : \"English\",\n        \"subjectDetails\": [{\"subjectId\":1,\"subSubjectId\": 2 },{\"subjectId\":1,\"subSubjectId\": 3 }]\n}\n"
+				},
+				"description": "Update Student Details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/tutor/addtutorDetails",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/tutor/addtutorDetails",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInJvbGUiOiJ0dXRvciIsImlhdCI6MTYwMDc1NTY3MCwiZXhwIjoxNjAzMzQ3NjcwfQ.aW6o-rJM0U372ZgrSfYZeYnIRd0C3aZSGFwPop9lU3s",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\t    \"userId\" : 10,\n        \"dob\": \"2012-06-10\",\n        \"country\" : 111,\n        \"timeZone\" : \"utc\",\n        \"state\": 4,\n        \"city\": 375,\n        \"mobileNo\" : 8829914970,\n        \"iyzicoId\": \"564651IY\",\n        \"joinDate\": \"2012-05-11\",\n        \"costperSession\": 12,\n        \"nativeLanguage\" : \"English\",\n        \"description\": \"Welcome to Text A Tutor: Live Math Help for SMARTPHONES gives you access to a math tutor via smartphone when you need it. Send texts or pictures of your problems 365 days per year! New users get a free credit!After your free trial you can get additional help with math homework for as little as $1 per question/credit! We respond in less than 10 minutes (between 2pm-midnight EST) or we'll give your money/credits back!\",\n        \"education\": [{\"id\": 1,\"type\":\"10th\",\"name\":\"DDPS\",\"passingYear\":2004},{\"id\": 2,\"type\":\"12th\",\"name\":\"KV\",\"passingYear\":2007}],\n        \"professionalDetails\": [{\"id\":1,\"noofYears\":3,\"name\":\"RK Mishra College\",\"subjectTaught\":\"Science\"}],\n        \"subjectDetails\": [{\"subjectId\":1,\"subSubjectId\": 2 },{\"subjectId\":1,\"subSubjectId\": 3 }],\n        \"availability\":[{\"day\": 0,\"time\" : [{\"0\":{\"startTime\":\"07:00\", \"endTime\":\"09:10\"}},{\"1\":{\"startTime\":\"10:00\", \"endTime\":\"12:10\"}}]},{\"day\":1,\"time\":[{\"0\":{\"startTime\":\"05:00\", \"endTime\":\"08:10\"}},{\"1\":{\"startTime\":\"10:00\", \"endTime\":\"12:00\"}}]}],\n        \"otherLanguage\": \"English,Hindi\",\n        \"awards\" : [{\"id\": 2,\"type\": \"collegeChampionship\",\"awardUrl\":\"}]\n}"
+				},
+				"description": "Add Tutor Details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://http://144.76.184.38:7000/api/tutor/updateTutor",
+			"request": {
+				"url": "http://http://144.76.184.38:7000/api/tutor/updateTutor",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInJvbGUiOiJ0dXRvciIsImlhdCI6MTYwMDc1NTY3MCwiZXhwIjoxNjAzMzQ3NjcwfQ.aW6o-rJM0U372ZgrSfYZeYnIRd0C3aZSGFwPop9lU3s",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t    \"userId\" : 10,\r\n        \"dob\": \"2012-06-10\",\r\n        \"country\" : 111,\r\n        \"timeZone\" : \"utc\",\r\n        \"state\": 4,\r\n        \"city\": 375,\r\n        \"mobileNo\" : 8829914970,\r\n        \"iyzicoId\": \"564651IY\",\r\n        \"joinDate\": \"2012-05-11\",\r\n        \"costperSession\": 12,\r\n        \"nativeLanguage\" : \"English\",\r\n        \"description\": \"Welcome to Text A Tutor: Live Math Help for SMARTPHONES gives you access to a math tutor via smartphone when you need it. Send texts or pictures of your problems 365 days per year! New users get a free credit!After your free trial you can get additional help with math homework for as little as $1 per question/credit! We respond in less than 10 minutes (between 2pm-midnight EST) or we'll give your money/credits back!\",\r\n        \"education\": [{\"id\": 1,\"type\":\"10th\",\"name\":\"DDPS\",\"passingYear\":2004},{\"id\": 2,\"type\":\"12th\",\"name\":\"KV\",\"passingYear\":2007}],\r\n        \"professionalDetails\": [{\"id\":1,\"noofYears\":3,\"name\":\"RK Mishra College\",\"subjectTaught\":\"Science\"}],\r\n        \"subjectDetails\": [{\"subjectId\":1,\"subSubjectId\": 2 },{\"subjectId\":1,\"subSubjectId\": 3 }],\r\n        \"availability\":[{\"day\": 0,\"time\" : [{\"0\":{\"startTime\":\"07:00\", \"endTime\":\"09:10\"}},{\"1\":{\"startTime\":\"10:00\", \"endTime\":\"12:10\"}}]},{\"day\":1,\"time\":[{\"0\":{\"startTime\":\"05:00\", \"endTime\":\"08:10\"}},{\"1\":{\"startTime\":\"10:00\", \"endTime\":\"12:00\"}}]}],\r\n        \"otherLanguage\": \"English,Hindi\",\r\n         \"certificates\": [{ \"id\":5,\"certificateUrl\":\"}]\r\n}"
+				},
+				"description": "Update Tutor Details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/session/createSession",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/session/createSession",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwNzg2NzYxLCJleHAiOjE2MDMzNzg3NjF9.NtCxv9NNq3r9ONYOdAch2zkvi1GNQ41p95dpGAqcKP4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t    \"userId\" : 12,\n        \"tutor_id\": 6,\n        \"student_id\": 5,\n        \"startTime\": \"05:30:12\",\n        \"endTime\": \"08:40:20\",\n        \"date\": \"2020-09-22\",\n        \"price\": 2.5,\n        \"sessionStatus\": \"upcoming\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/session/getSessionsById/3",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/session/getSessionsById/3",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwNzg2NzYxLCJleHAiOjE2MDMzNzg3NjF9.NtCxv9NNq3r9ONYOdAch2zkvi1GNQ41p95dpGAqcKP4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Raj\",\n    \"userId\": \"5f6cbef65867de00d8d42385\" ,\n    \"contactNo\": \"7676775754646\",\n    \"isPrincipal\": 0,\n    \"isTeaching\": 1,\n    \"isClassTeacher\":0,\n    \"teachingType\": \"PT\",\n    \"isReviewing\": 0,\n    \"staffArea\": \"stafff\",\n    \"teacherCategory\": \"PT\",\n    \"subjectDetails\": [{\"subjectName\":\"maths\",\"class\":[{\n    \t\"className\": \"seventh\",\n    \t\"sections\":[{\n    \t\t\"sectionName\": \"A\"\n    \t},{\n    \t\t\"sectionName\" : \"B\"\n    \t}]\n    }]\n\n    }],\n    \"schoolId\": \"5f66ea7921577b0e98ab8c6d\",\n    \"role\": \"teaching\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/tutor/getTutorDetails/5",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/tutor/getTutorDetails/10",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2MDAzMTY4NzksImV4cCI6MTYwMjkwODg3OX0.HVbB2xVDyVJrthIVuLogur5gowCmLlTlj5_Gy76zeU8",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Authorization",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2MDAzMTY4NzksImV4cCI6MTYwMjkwODg3OX0.HVbB2xVDyVJrthIVuLogur5gowCmLlTlj5_Gy76zeU8",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/session/createSession",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/student/getStudentDetails/12",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwNzg2NzYxLCJleHAiOjE2MDMzNzg3NjF9.NtCxv9NNq3r9ONYOdAch2zkvi1GNQ41p95dpGAqcKP4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t    \"userId\" : 12,\n        \"tutor_id\": 6,\n        \"student_id\": 5,\n        \"startTime\": \"05:30:12\",\n        \"endTime\": \"08:40:20\",\n        \"date\": \"2020-09-22\",\n        \"price\": 2.5,\n        \"sessionStatus\": \"upcoming\"\n}"
+				},
+				"description": "Get Session Details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/tutor/deleteImage",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/tutor/deleteImage",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInJvbGUiOiJ0dXRvciIsImlhdCI6MTYwMDc1NTY3MCwiZXhwIjoxNjAzMzQ3NjcwfQ.aW6o-rJM0U372ZgrSfYZeYnIRd0C3aZSGFwPop9lU3s",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\" : 10,\n\t\"columnName\" : \"awards\",\n\t\"imageObject\" : {\"id\": 2, \"type\": \"collegeChampionship\", \"imageUrl\": \"1600922737809.jpg\"}\n}"
+				},
+				"description": "Delete Image"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/subject/getSubjectListbyName/tri",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/subject/getSubjectListbyName/tri",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"searchKeyword\" : \"sc\"\n}"
+				},
+				"description": "Get subject by name"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/student/getSessionDetails/",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/student/getSessionDetails/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwNzg2NzYxLCJleHAiOjE2MDMzNzg3NjF9.NtCxv9NNq3r9ONYOdAch2zkvi1GNQ41p95dpGAqcKP4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t    \"userId\" : 12,\n        \"tutor_id\": 6,\n        \"student_id\": 5,\n        \"startTime\": \"08:30:12\",\n        \"endTime\": \"10:40:20\",\n        \"date\": \"2020-09-22\",\n        \"price\": 1.5,\n        \"sessionStatus\": \"upcoming\"\n}"
+				},
+				"description": "Get Session Details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/admin/verifyTutor",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/admin/verifyTutor",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tutorId\" : 16\n}"
+				},
+				"description": "Verify Tutor"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/session/getStudentSessionsById/",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/session/getStudentSessionsById/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2MDAzMTY4NzksImV4cCI6MTYwMjkwODg3OX0.HVbB2xVDyVJrthIVuLogur5gowCmLlTlj5_Gy76zeU8",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get student session by id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/tutor/getTutorDetails/5",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/student/getStudentDetails/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2MDAzMTY4NzksImV4cCI6MTYwMjkwODg3OX0.HVbB2xVDyVJrthIVuLogur5gowCmLlTlj5_Gy76zeU8",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Authorization",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2MDAzMTY4NzksImV4cCI6MTYwMjkwODg3OX0.HVbB2xVDyVJrthIVuLogur5gowCmLlTlj5_Gy76zeU8",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "get Tutor details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/review/createReview",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/review/createReview",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwNzg2NzYxLCJleHAiOjE2MDMzNzg3NjF9.NtCxv9NNq3r9ONYOdAch2zkvi1GNQ41p95dpGAqcKP4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userId\" : 12,\n\"session_id\" : 5,\n\"review\" : \"Good One Big\",\n\"rating\" : 4.2\n}"
+				},
+				"description": "To create student review on a particular session"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/session/getStudentSessionsById/",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/session/getTutorSessionsById/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2MDAzMTY4NzksImV4cCI6MTYwMjkwODg3OX0.HVbB2xVDyVJrthIVuLogur5gowCmLlTlj5_Gy76zeU8",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "get student session by id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/review/createReview",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/review/createReview",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjAwNzg2NzYxLCJleHAiOjE2MDMzNzg3NjF9.NtCxv9NNq3r9ONYOdAch2zkvi1GNQ41p95dpGAqcKP4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userId\" : 12,\n\"session_id\" : 5,\n\"review\" : \"Good Oe Big2\",\n\"rating\" : 4.4\n}"
+				},
+				"description": "To create student review on a particular session"
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/tutor/getTutorBySubject/physics",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/tutor/getTutorBySubject/physics",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2MDAzMTY4NzksImV4cCI6MTYwMjkwODg3OX0.HVbB2xVDyVJrthIVuLogur5gowCmLlTlj5_Gy76zeU8",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Authorization",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE2MDAzMTY4NzksImV4cCI6MTYwMjkwODg3OX0.HVbB2xVDyVJrthIVuLogur5gowCmLlTlj5_Gy76zeU8",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://144.76.184.38:7000/api/subject/getSubjectListWithCount/",
+			"request": {
+				"url": "http://144.76.184.38:7000/api/subject/getSubjectListWithCount/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"searchKeyword\" : \"sc\"\n}"
+				},
+				"description": "Get subject list"
+			},
+			"response": []
+		}
+	]
+}
